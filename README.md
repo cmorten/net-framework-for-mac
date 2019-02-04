@@ -11,9 +11,11 @@ Run `./init.sh` in the root directory. This will perform the following steps:
 1. Install homebrew if you don't already have it.
 1. Update homebrew if you do already have it.
 1. Install/update:
-  * Vagrant
-  * VirtualBox
-  * Docker
+
+- Vagrant
+- VirtualBox
+- Docker
+
 1. Provision a Windows Server 2019 virtual machine using Vagrant and VirtualBox.
 1. Perform a sniff test to ensure can talk to the Windows Server 2019 Docker Machine.
 
@@ -27,15 +29,24 @@ Run the following to build and run the application:
 # Swap to the Windows Docker Machine
 eval $(docker-machine env 2019)
 
-# Get the Windows Docker Machine IP
-export DOCKER_WINDOWS_HOST=$(docker-machine ip 2019)
+# Enter the sample repo
+cd ./sample
 
 # Build the app
 docker build -t aspnet_sample .
 
 # Run the app
-docker run -it --rm -p 8000:80 --name aspnet_sample aspnet_sample
+docker run -d --rm -p 8000:80 --name aspnet_sample aspnet_sample:latest
+
+# Get the Windows Docker Machine IP
+export DOCKER_WINDOWS_HOST=$(docker-machine ip 2019)
 
 # Open the app in a browser
 open "http://${DOCKER_WINDOWS_HOST}:8000"
+```
+
+To stop the application, run:
+
+```console
+docker stop aspnet_sample
 ```
