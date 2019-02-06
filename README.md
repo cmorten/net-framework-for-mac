@@ -4,6 +4,12 @@ A repo demonstrating building and running Windows .NET applications on a Mac.
 
 Please Note: Files make the assumption that they are being run on a Mac, and are very Mac specific.
 
+## Background
+
+It can be a pain point developing .NET applications on a Mac. The aim of this repo was to prove that the developer experience could be streamlined using modern tooling such as Docker.
+
+Largely based on the [https://github.com/StefanScherer/windows-docker-machine](https://github.com/StefanScherer/windows-docker-machine), as there is no point reinventing the wheel if someone has already done most of the legwork!
+
 ## Getting started
 
 Run `./init.sh` in the root directory. This will perform the following steps:
