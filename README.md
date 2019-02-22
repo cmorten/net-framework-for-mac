@@ -18,9 +18,9 @@ Run `./init.sh` in the root directory. This will perform the following steps:
 1. Update homebrew if you do already have it.
 1. Install/update:
 
-    - Vagrant
-    - VirtualBox
-    - Docker
+   - Vagrant
+   - VirtualBox
+   - Docker
 
 1. Provision a Windows Server 2019 virtual machine using Vagrant and VirtualBox.
 1. Perform a sniff test to ensure can talk to the Windows Server 2019 Docker Machine.

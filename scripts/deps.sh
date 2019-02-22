@@ -80,26 +80,3 @@ brew tap caskroom/versions
 wrap 'brew_cask_install_or_upgrade' "${casks[@]}"
 wrap 'brew_install_or_upgrade' "${brews[@]}"
 brew cleanup
-
-log "Launching vagrant virtualbox for windows_2019_docker..."
-vagrant up --provider virtualbox windows_2019_docker --provision
-
-log "Listing docker machines..."
-docker-machine ls
-
-log "Swapping to Windows docker-machine..."
-log "\t Use command "'eval $(docker-machine env 2019)'
-eval $(docker-machine env 2019)
-
-log "Listing Windows docker images..."
-docker images -a
-
-log "Listing Windows docker containers..."
-docker ps -a
-
-log "Swapping back to Mac docker-machine..."
-log "\t Use command "'eval $(docker-machine env -unset)'
-eval $(docker-machine env -unset)
-
-export DOCKER_WINDOWS_HOST=$(docker-machine ip 2019)
-log "When using windows containers, use the docker windows host ip '${DOCKER_WINDOWS_HOST}'"

@@ -1,2 +1,7 @@
 *.box
 .vagrant/
+packages/
+bin/
+obj/
+
+node_modules

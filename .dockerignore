@@ -1,0 +1,13 @@
+.gitignore
+.dockerignore
+.vagrant
+
+README.md
+Vagrantfile
+Makefile
+
+*.box
+*.Dockerfile
+
+scripts/create-machine.ps1
+scripts/deps.sh
