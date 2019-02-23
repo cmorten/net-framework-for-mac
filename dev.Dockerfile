@@ -15,8 +15,7 @@ RUN Add-WindowsFeature \
 COPY package.json C:/tmp/package.json
 RUN cd C:/tmp; \
     npm install; \
-    npm install pm2 -g; \
-    Move-Item -Path C:\tmp\node_modules -Destination C:\node_modules;
+    npm install pm2 -g;
 
 RUN rm -r C:\inetpub\wwwroot
 

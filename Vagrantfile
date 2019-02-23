@@ -16,8 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder machineHome, machineHome
 
   config.vm.define "windows_2019_docker" do |cfg|
-    # config.vm.box = "StefanScherer/windows_2019_docker"
-    config.vm.box = "./windows_2019_docker_virtualbox.box"
+    config.vm.box = "StefanScherer/windows_2019_docker"
     cfg.vm.provision "shell", path: "scripts/create-machine.ps1", args: "-machineHome #{machineHome} -machineName #{machineName}"
   end
 

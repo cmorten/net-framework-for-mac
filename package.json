@@ -2,21 +2,26 @@
   "name": "windows-2019-docker",
   "version": "1.0.0",
   "description": "A repo demonstrating building and running Windows .NET applications on a Mac.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "all": "make all",
+    "build:dev": "make build-dev",
+    "build:prod": "make build-prod",
+    "build:vm": "make build-vm",
+    "clean": "make clean",
+    "deps": "make deps",
+    "open": "make open",
+    "run:dev": "make run-dev",
+    "run:prod": "make run-prod"
   },
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asos-craigmorten/windows-2019-docker.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Craig Morten <craig.morten@asos.com>",
   "bugs": {
     "url": "https://github.com/asos-craigmorten/windows-2019-docker/issues"
   },
   "homepage": "https://github.com/asos-craigmorten/windows-2019-docker#readme",
-  "dependencies": {
-    "chokidar": "^2.1.2"
-  }
+  "dependencies": {}
 }

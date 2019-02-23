@@ -1,16 +1,16 @@
 #!/bin/bash
 
 casks=(
-  vagrant
-  virtualbox
   docker
+  virtualbox
+  vagrant
 )
 
 brews=()
 
 function log() {
     m_time=`date "+%F %T"`
-    echo -e "${m_time} [windows_2019_docker]: $1"
+    echo -e "${m_time} [windows-2019-docker]: $1"
 }
 
 function command_exists() {

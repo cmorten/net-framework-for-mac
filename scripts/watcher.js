@@ -9,8 +9,8 @@ chokidar
   .watch(sourceFolder, {
     persistent: true,
     usePolling: true,
-    interval: 500,
-    binaryInterval: 1000
+    interval: 300,
+    binaryInterval: 500
   })
   .on("all", (event, sourceFilePath) => {
     const sourceFolderPath = path.dirname(sourceFilePath);
