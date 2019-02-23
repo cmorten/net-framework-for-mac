@@ -12,10 +12,11 @@ RUN Add-WindowsFeature \
     NET-Framework-45-ASPNET, \
     Web-Asp-Net45;
 
-COPY package.json C:/tmp/package.json
+COPY package*.json C:/tmp/
 RUN cd C:/tmp; \
     npm install; \
-    npm install pm2 -g;
+    npm install pm2 -g; \
+    Move-Item -Path C:/tmp/node_modules -Destination C:/node_modules;
 
 RUN rm -r C:\inetpub\wwwroot
 

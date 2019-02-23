@@ -2,6 +2,10 @@
 .dockerignore
 .vagrant
 
+node_modules/
+
+net_on_macos_infra.png
+net_on_macos.png
 README.md
 Vagrantfile
 Makefile

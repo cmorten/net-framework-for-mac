@@ -23,5 +23,7 @@
     "url": "https://github.com/asos-craigmorten/windows-2019-docker/issues"
   },
   "homepage": "https://github.com/asos-craigmorten/windows-2019-docker#readme",
-  "dependencies": {}
+  "dependencies": {
+    "chokidar": "^2.1.2"
+  }
 }
