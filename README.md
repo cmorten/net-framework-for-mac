@@ -1,6 +1,6 @@
-# windows-2019-docker
+# net-framework-for-mac
 
-A repo demonstrating building and running Windows .NET applications on a Mac.
+A repo demonstrating building and running Windows .NET framework applications on a Mac.
 
 Please Note: Files make the assumption that they are being run on a Mac, and are particularly Mac specific.
 
