@@ -6,15 +6,17 @@ Please Note: Files make the assumption that they are being run on a Mac, and are
 
 ## Background
 
-It can be a pain point developing .NET applications on a Mac. The aim of this repo was to prove that the developer experience could be streamlined using modern tooling such as Docker.
+It can be a pain point developing .NET framework applications as nominally it can only be done on Windows, whereas a team of developers may be working on a spectrum of Windows, Mac, Linux etc. The aim of this repo was to prove that the developer experience can be streamlined, using modern tooling such as Docker, so developing .NET framework applications on anything other than Windows is reasonably easy.
 
-Largely based on the [work by Stefan Scherer](https://github.com/StefanScherer/windows-docker-machine), as there is no point reinventing the wheel if someone has already done most of the legwork!
+Largely based on the [great work by Stefan Scherer](https://github.com/StefanScherer/windows-docker-machine), as there is no point reinventing the wheel if someone has already done most of the legwork!
+
+The outcome of this repo is a workflow whereby we can volume mount a .NET framework application into a Docker development container, which reloads the application on change using IIS, and can be edited on your local Mac using your favourite IDE / terminal.
 
 ## Getting started
 
 The project ships with both a `Makefile` and a `package.json` for the user's preference. In order to use the `package.json` you will require to have `npm` installed. You can also use `yarn`.
 
-We will be using the `make` syntax for this readme. All commands have a `npm`/`yarn` equivalent, please refer to the `package.json` file.
+We will be using the `make` syntax for this README. All commands have a `npm`/`yarn` equivalent, please refer to the `package.json` file for details.
 
 ### Setup Steps
 
